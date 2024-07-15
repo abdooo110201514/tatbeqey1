@@ -1,0 +1,505 @@
+html {
+    --main-color: #333333;
+    --secondary-color: #fa694e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Work Sans";
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Start Header */
+
+.header {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.header .container .iconDiv {
+    width: 40px;
+    direction: rtl;
+}
+
+.header .container .iconDiv .iconLine {
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.header .container .iconDiv #centerLine {
+    width: 50%;
+    transition: 0.5s;
+}
+
+.header .container .menuDiv:hover #centerLine {
+    width: 100%;
+}
+
+.header .container .menuDiv {
+    position: relative;
+}
+
+.header .container .menuDiv ul {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    list-style: none;
+    font-size: 20px;
+    color: var(--main-color);
+    position: absolute;
+    right: -15px;
+    top: 10px;
+    border: 2px solid var(--main-color);
+    display: none   ;
+}
+
+.header .container .menuDiv ul::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
+
+.header .container .menuDiv ul li {
+    padding: 10px 40px;
+    text-align: center;
+}
+
+.header .container .menuDiv ul .divider {
+    border-bottom: 1px solid #676464;
+}
+
+.header .container .menuDiv:hover ul {
+    display: block;
+} 
+
+/* End Header */
+
+/* Start Landing */
+
+.landing {
+    width: 99vw;
+    height: 100vh;
+    background-image: url(images/coding.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.landing::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.landing .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.landing .container .centerDiv {
+    text-align: center; 
+    position: relative;
+}
+
+.landing .container .centerDiv h1 {
+    color: white;
+    font-size: 80px;
+}
+
+.landing .container .centerDiv p {
+    font-size: 35px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.landing .container .centerDiv button {
+    padding: 20px 40px;
+    font-size: 25px;
+    background-color: #fa694e;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.landing .container .centerDiv button:hover {
+    cursor: pointer;
+    background-color: #a43521;
+}
+
+@media (max-width: 767px) {
+    .landing .container .centerDiv h1 {
+        font-size: 60px;
+    }
+
+    .landing .container .centerDiv p {
+        font-size: 25px;
+    }
+}
+
+/* End Landing */
+
+/* Starting Services */
+
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.services .container .service {
+    width: 330px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.services .container .service h2 {
+    font-size: 30px;
+}
+
+.services .container .service p {
+    font-size: 25px;   
+}
+
+.services .container .service i {
+    color: #fa694e;
+    font-size: 70px;
+}
+
+/* Ending Services */
+
+/* Starting stories */
+
+.stories {
+    position: relative;
+    background-color: #f0ebeb;
+    margin: 50px 0;
+}
+
+.stories .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.stories .container .header {
+    text-align: center;
+    
+}
+
+.stories .container .body {
+    margin-top: 300px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.stories .container .body a {
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.stories .container .body .card .head {
+    height: 50%;
+    background-color: rgb(189, 187, 187);
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+}
+
+.stories .container .body .card .head img {
+    width: 180px;
+}
+
+.stories .container .header h1 {
+    font-size: 70px;
+    color: #676464;
+}
+
+.stories .container .header p {
+    font-size: 25px;
+}
+
+.stories .container .body .card p {
+    color: gray;
+}
+
+.stories .container.body .card h1 {
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.stories .container .body .books {
+    width: 300px;
+    height: 400px;
+}
+
+.stories .container .body .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stories .container .body .cards .card {
+    width: 210px;
+    margin: 10px;
+}
+
+.stories .container .body .cards .card .foot {
+    background-color: aliceblue;
+    margin: 0;
+    height: 150px;
+    border-radius:  0 0 20px 20px;
+}
+
+.stories .container .books::before {
+    content: "";
+    width: 30%;
+    height: 100%;
+    background-color: #bd0000;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+}
+
+@media (max-width: 900px) {
+    .books {
+        display: none;
+    }
+
+    .card {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .cards {
+        margin-top: 50px;
+    }
+}
+
+/* Ending Stories */
+
+/* starting cotact */
+
+.contact .container h1 {
+    text-align: center;
+    margin-bottom: 100px;
+    font-size: 70px;
+    color: #eeeeee;
+}
+
+.contact .container {
+    margin-bottom: 100px;
+}
+
+.contact .container .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+
+.contact .container .body .form {
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact .container .body .form .name, .Email {
+    width: 47%;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.contact .container .body .form .name {
+    margin-left: 0;
+}
+
+.contact .container .body .form .subject {
+    width: 98%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact .container .body .form .message {
+    width: 98%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.contact .container .body .form input {
+    font-size: 15px;
+    outline-color: #bd0000;
+    background-color: #f4f4f4;
+    transition: 1s;
+}
+
+.contact .container .body .con {
+    text-align: center;
+    
+}
+
+.contact .container .body .con h2 {
+    font-size: 40px;
+    color: #eeeeee;
+}
+
+.contact .container .body .form .button {
+    width: 90%;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact .container .body .form .button button {
+    width: 80%;
+    background-color: #ff0000;
+    border: 0;
+    height: 35px;
+    border-radius: 3px;
+    transition: 0.7s;
+}
+
+.contact .container .body .form .button button:hover {
+    background-color: #930e0e;
+    color: #afe0da;
+    border-radius: 7px;
+}
+
+.contact .container .body .form input:hover {
+    background-color: #aaa9a9;
+}
+@media (max-width: 900px) {
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        justify-content: space-evenly;
+    }
+    
+    .form button {
+        width: 300px;
+        bottom: auto;
+    }
+
+    .form .message {
+        width: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact .container .body {
+        text-align: center;
+    }
+
+    .form {
+        text-align: center;
+        width: 100vw;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin: auto;
+        width: auto;
+        justify-content: baseline;
+        align-items: baseline;
+    }
+
+    .con {
+        margin-left: 2px;
+        margin-right: 2px;
+        margin: auto;
+    }
+}
+
+/* ending contact */
+
+/* Starting footer */
+
+.footer {
+    background-color: #bd0000;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer .container h1 {
+    font-size: 15px;
+}
+
+.footer i {
+    font-size: 30px;
+    padding: 5px;
+    color: gray;
+}
+
+/* Ending footer */
+
+
+
+
+/* Ending The Page Al Hamdo Lelah */
