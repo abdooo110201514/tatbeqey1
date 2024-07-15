@@ -319,7 +319,7 @@ body {
     right: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .books {
         display: none;
     }
@@ -430,13 +430,17 @@ body {
 .contact .container .body .form input:hover {
     background-color: #aaa9a9;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .form {
         width: 100%;
         display: flex;
         flex-direction: column;
         font-size: 20px;
         justify-content: space-evenly;
+    }
+
+    input {
+        width: 100%;
     }
     
     .form button {
