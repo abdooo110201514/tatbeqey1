@@ -453,7 +453,7 @@ body {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
     .contact .container .body {
         text-align: center;
     }
@@ -467,6 +467,7 @@ body {
         width: auto;
         justify-content: baseline;
         align-items: baseline;
+        margin-bottom: 50px;
     }
 
     .con {
@@ -499,6 +500,26 @@ body {
     font-size: 30px;
     padding: 5px;
     color: gray;
+}
+
+@media (max-width: 800px) {
+
+
+    .footer .container {
+        display: block;
+    }
+
+    .footer .container .icon {
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 100px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .container .h {
+        text-align: center;
+    }
 }
 
 /* Ending footer */
